@@ -15,7 +15,6 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private Button buttonIr;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this,SecondActivity.class);
                 //creo bundle o valija.
                 Bundle unBundle = new Bundle();
-                unBundle.putString("saludo","HOLA DESDE LA PRIMERA ACTIVIDAD");
+                unBundle.putString(SecondActivity.KEY_BUNDLE_SALUDO,"HOLA DESDE LA PRIMERA ACTIVIDAD");
 
                 //asociar el bundle al intent, conectarlos.
                 intent.putExtras(unBundle);

@@ -8,6 +8,8 @@ import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
 
+    public static final String KEY_BUNDLE_SALUDO = "saludo";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +21,7 @@ public class SecondActivity extends AppCompatActivity {
 
         Bundle unBundleRecibido = intentRecibido.getExtras();
 
-        String saludo = unBundleRecibido.getString("saludo");
+        String saludo = unBundleRecibido.getString(SecondActivity.KEY_BUNDLE_SALUDO);
 
 
         Toast.makeText(this, saludo, Toast.LENGTH_SHORT).show();
